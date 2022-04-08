@@ -28,7 +28,7 @@ type NewsStore struct {
 
 func IndianBreakingLiveNews(apiKey string, countryCode string) {
 	var news NewsStore
-	newGetURL := "https://newsapi.org/v2/top-headlines?country=" + countryCode
+	newGetURL := "https://newsapi.org/v2/top-headlines?country=" + countryCode + "&category=technology"
 	httpClient := http.Client{}
 	newsRequest, err := http.NewRequest("GET", newGetURL, nil)
 	if err != nil {
